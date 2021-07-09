@@ -8,4 +8,4 @@ echo $server_list \
     | uniq -c \
     | sed 's/\"/:/' \
     | sed 's/\"//' \
-    | awk -F\: '{ for (i=0; i<NF; i+=2) print strftime("%H:%M:%S") "    " "v"$2 $1;  }'
+    | awk -F\: '{ for (i=0; i<NF; i+=2) print strftime("%Y-%m-%dT%H:%M:%S") "    " "v"$2 $1;  }'
